@@ -1,36 +1,37 @@
+$padding-default: 17px;
 $toobar-height: 50px;
 
 .toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: $toobar-height;
-  display: flex;
   align-items: center;
-  background-image: linear-gradient(to right, #6602ff, #6602ff, #6602ff, #5302cf, #5302cf, #5302cf);
-  color: white;
-  padding-right: 34px;
+  background-image: linear-gradient(to right, #6600ff, #6600ff, #6600ff, #5300cf, #5300cf, #5300cf);
+  display: flex;
+  height: $toobar-height;
+  left: 0;
+  padding: 0 $padding-default 0 $padding-default;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .toolbar-menu-item {
-  height: $toobar-height;
-  width: 80px;
   color: white;
-  text-align: center;
-  vertical-align: middle;
-  justify-content: center;
+  font-size: 18px;
+  height: inherit;
   line-height: $toobar-height;
-  cursor: pointer;
+  padding: 0 $padding-default 0 $padding-default;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  width: 80px;
 }
 
 .toolbar-menu-item.active {
   @extend .toolbar-menu-item;
-  background-color: #7128df;
+  background-color: #7127df;
 }
 
 .toolbar-title {
-  margin: 9px 0px 12px 17px;
-  font-size: 25px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 29px;
 }
