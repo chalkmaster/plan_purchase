@@ -21,10 +21,6 @@
   vertical-align: middle;
 }
 
-.plan-content-value::before {
-  content: "$";
-}
-
 .plan-content-description {
   font-size: 18px;
   grid-area: "description";
@@ -46,4 +42,8 @@
   letter-spacing: 0px;
   text-align: center;
   width: 120px;
+}
+
+.plan-content.unavailable {
+  opacity: 50%;
 }

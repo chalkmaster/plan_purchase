@@ -1,9 +1,31 @@
 <div class="plan-content"
-     [ngStyle]="{'background-color': plan?.color}">
-  <span class="plan-content-name">{{plan?.name}}</span>
-  <span class="plan-content-value">{{plan?.value}}</span>
-  <span class="plan-content-description">{{plan?.description}}</span>
-  <div class="plan-content-action">
-    <button class="plan-content-action-button">BUY</button>
-  </div>
+     role="group"
+     [ngStyle]="{'background-color': plan?.color}"
+     [ngClass]="{'unavailable': this.plan?.status === planStatus.unavailable}">
+      <!-- Plan Name Area -->
+      <span class="plan-content-name">{{plan?.name}}</span>
+
+      <!-- Plan Value / Bought Info Area -->
+      <span class="plan-content-value"
+            *ngIf="this.plan?.status !== planStatus.bought">${{plan?.value}}</span>
+      <span class="plan-content-value"
+            *ngIf="this.plan?.status === planStatus.bought">BOUGHT!</span>
+
+      <!-- Plan Description Area -->
+      <span class="plan-content-description"
+            role="contentinfo">{{plan?.description}}</span>
+
+      <!-- Plan Action Controls Area -->
+      <div class="plan-content-action">
+            <button class="plan-content-action-button"
+                    role="button"
+                    *ngIf="this.plan?.status !== planStatus.bought"
+                    [disabled]="this.plan?.status === planStatus.unavailable"
+                    (click)="buy()">BUY</button>
+            <button class="plan-content-action-button"
+                    role="button"
+                    *ngIf="this.plan?.status === planStatus.bought"
+                    [disabled]="this.plan?.status === planStatus.unavailable"
+                    (click)="cancel()">CANCEL</button>
+      </div>
 </div>

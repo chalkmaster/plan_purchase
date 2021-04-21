@@ -1,4 +1,4 @@
-import { PlanState } from './plan-state';
+import { PlanStatus } from './plan-status';
 
 export class Plan {
   constructor(
@@ -7,6 +7,6 @@ export class Plan {
     public description: string = '',
     public value: number = 0.0,
     public color: string = '',
-    public state: PlanState = PlanState.available,
+    public status: PlanStatus = PlanStatus.available,
   ) { }
 }
