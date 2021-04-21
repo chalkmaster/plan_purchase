@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { PlanComponent } from './plan/plan.component';
 import { PageComponent } from './page/page.component';
+import { PurchaseService } from './services/purchase.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { PageComponent } from './page/page.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [PurchaseService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

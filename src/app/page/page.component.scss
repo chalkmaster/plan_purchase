@@ -1,10 +1,10 @@
 .page-content {
+  align-content: center;
   display: grid;
+  gap: 14px;
   grid-area: "content";
   grid-auto-flow: column;
   justify-content: center;
-  align-content: center;
-  gap: 14px;
   margin-top: 83px;
 }
 

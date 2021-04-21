@@ -4,8 +4,8 @@ import { PageComponent } from './page/page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'one', pathMatch: 'full' },
-  { path: 'one', component: PageComponent, data: { page: 0 } },
-  { path: 'two', component: PageComponent, data: { page: 1 } },
+  { path: 'one', component: PageComponent, data: { page: 1 } },
+  { path: 'two', component: PageComponent, data: { page: 2 } },
 ];
 
 @NgModule({

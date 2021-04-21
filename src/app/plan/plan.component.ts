@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, Type } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Plan } from './plan';
 import { PlanStatus } from './plan-status';
 
@@ -13,16 +13,11 @@ export class PlanComponent implements OnInit {
   @Output() public planBought: EventEmitter<Plan> = new EventEmitter<Plan>();
   @Output() public boughtCanceled: EventEmitter<Plan> = new EventEmitter<Plan>();
 
-  unavailable: boolean = false;
-  bought: boolean = false;
   planStatus: typeof PlanStatus = PlanStatus;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log('init');
-    this.unavailable = this.plan?.status === PlanStatus.unavailable;
-    this.bought = this.plan?.status === PlanStatus.bought;
   }
 
   buy(): void {

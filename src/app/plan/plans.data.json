@@ -1,0 +1,34 @@
+[
+  {
+    "id": "plan_starter",
+    "name": "STARTER",
+    "description": "Starter features for your business to grow.",
+    "value": 1.0,
+    "color": "#979797",
+    "status": 0
+  },
+  {
+    "id": "plan_regular",
+    "name": "REGULAR",
+    "description": "Regular features for your business to grow.",
+    "value": 25.0,
+    "color": "#3B86FF",
+    "status": 0
+  },
+  {
+    "id": "plan_professional",
+    "name": "PROFESSIONAL",
+    "description": "Professional features for your business to grow.",
+    "value": 75.0,
+    "color": "#8B68EE",
+    "status": 0
+  },
+  {
+    "id": "plan_ultimate",
+    "name": "ULTIMATE",
+    "description": "Ultimate features for your business to grow.",
+    "value": 115.0,
+    "color": "#EE3541",
+    "status": 0
+  }
+]
