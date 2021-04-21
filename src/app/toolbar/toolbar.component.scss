@@ -8,7 +8,7 @@ $toobar-height: 50px;
   height: $toobar-height;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(to right, #6602ff, #5302cf);
+  background-image: linear-gradient(to right, #6602ff, #6602ff, #6602ff, #5302cf, #5302cf, #5302cf);
   color: white;
   padding-right: 34px;
 }
@@ -22,10 +22,10 @@ $toobar-height: 50px;
   justify-content: center;
   line-height: $toobar-height;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.toolbar-menu-item:active,
-.toolbar-menu-item-active {
+.toolbar-menu-item.active {
   @extend .toolbar-menu-item;
   background-color: #7128df;
 }
