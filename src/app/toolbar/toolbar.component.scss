@@ -1,0 +1,36 @@
+$toobar-height: 50px;
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $toobar-height;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, #6602ff, #5302cf);
+  color: white;
+  padding-right: 34px;
+}
+
+.toolbar-menu-item {
+  height: $toobar-height;
+  width: 80px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  line-height: $toobar-height;
+  cursor: pointer;
+}
+
+.toolbar-menu-item:active,
+.toolbar-menu-item-active {
+  @extend .toolbar-menu-item;
+  background-color: #7128df;
+}
+
+.toolbar-title {
+  margin: 9px 0px 12px 17px;
+  font-size: 25px;
+}
