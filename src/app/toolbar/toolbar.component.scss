@@ -15,15 +15,12 @@ $toobar-height: 50px;
 
 .toolbar-menu {
   margin: 0 $padding-default 0 $padding-default;
-  height: $toobar-height;
-  width: fit-content;
 }
 
 .toolbar-menu-item {
   color: white;
   display: inline-block;
   font-size: 18px;
-  height: inherit;
   line-height: $toobar-height;
   text-align: center;
   text-decoration: none;
