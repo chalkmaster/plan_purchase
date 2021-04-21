@@ -1,18 +1,21 @@
 <div class="plan-content"
-     role="group"
      [ngStyle]="{'background-color': plan?.color}"
      [ngClass]="{'unavailable': this.plan?.status === planStatus.unavailable}">
       <!-- Plan Name Area -->
-      <span class="plan-content-name">{{plan?.name}}</span>
+      <span class="plan-content-name"
+            role="heading">{{plan?.name}}</span>
 
       <!-- Plan Value / Bought Info Area -->
       <span class="plan-content-value"
+            role="text"
             *ngIf="this.plan?.status !== planStatus.bought">${{plan?.value}}</span>
       <span class="plan-content-value"
+            role="text"
             *ngIf="this.plan?.status === planStatus.bought">BOUGHT!</span>
 
       <!-- Plan Description Area -->
       <span class="plan-content-description"
+            role="text"
             role="contentinfo">{{plan?.description}}</span>
 
       <!-- Plan Action Controls Area -->

@@ -11,6 +11,10 @@ export class PurchaseService {
 
   private plans: Plan[] = [];
   constructor() {
+    this.loadPlans();
+  }
+
+  loadPlans(): void {
     this.plans = data;
   }
 

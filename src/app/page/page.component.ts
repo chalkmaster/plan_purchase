@@ -9,8 +9,7 @@ import { PurchaseService } from '../services/purchase.service';
   styleUrls: ['./page.component.scss'],
 })
 export class PageComponent implements OnInit {
-  plans?: Plan[];
-  page: number = 1;
+  public plans?: Plan[];
 
   constructor(private route: ActivatedRoute,
               private purchaseService: PurchaseService) {
@@ -18,17 +17,15 @@ export class PageComponent implements OnInit {
 
   ngOnInit(): void {
     const data: { page: number } = this.route.snapshot.data as { page: number };
-    this.page = data.page;
-    this.boundData(this.page);
+    this.loadData(data.page);
   }
 
-  boundData(page: number): void {
+  loadData(page: number): void {
     this.plans = this.purchaseService.getByPage(page);
   }
 
   planBought(plan: Plan): void {
     this.purchaseService.buyPlan(plan);
-    this.boundData(this.page);
   }
 
   boughtCanceled(_: Plan): void {
