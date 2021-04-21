@@ -13,12 +13,18 @@ $toobar-height: 50px;
   top: 0;
 }
 
+.toolbar-menu {
+  margin: 0 $padding-default 0 $padding-default;
+  height: $toobar-height;
+  width: fit-content;
+}
+
 .toolbar-menu-item {
   color: white;
+  display: inline-block;
   font-size: 18px;
   height: inherit;
   line-height: $toobar-height;
-  padding: 0 $padding-default 0 $padding-default;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
