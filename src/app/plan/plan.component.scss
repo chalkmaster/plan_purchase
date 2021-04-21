@@ -1,0 +1,49 @@
+.plan-content {
+  box-shadow: 0px 2px 6px #0000000a;
+  color: #ffffff;
+  display: grid;
+  grid-template-areas: "name", "value", "description", "action";
+  grid-template-rows: 56px 112px 61px auto;
+  height: 284px;
+  padding: 11px 25px 0 20px;
+  width: 341px;
+}
+
+.plan-content-name {
+  font-size: 28px;
+  grid-area: "name";
+}
+
+.plan-content-value {
+  font-size: 80px;
+  grid-area: "value";
+  text-align: center;
+  vertical-align: middle;
+}
+
+.plan-content-value::before {
+  content: "$";
+}
+
+.plan-content-description {
+  font-size: 18px;
+  grid-area: "description";
+  text-align: left;
+}
+
+.plan-content-action {
+  grid-area: "action";
+  text-align: center;
+}
+
+.plan-content-action-button {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  border: none;
+  color: #3b86ff;
+  font-size: 15px;
+  height: 35px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 120px;
+}

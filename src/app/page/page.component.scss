@@ -1,0 +1,15 @@
+.page-content {
+  display: grid;
+  grid-area: "content";
+  grid-auto-flow: column;
+  justify-content: center;
+  align-content: center;
+  gap: 14px;
+  margin-top: 83px;
+}
+
+@media screen and (max-width: 800px) {
+  .page-content {
+    grid-template-columns: 100%;
+  }
+}

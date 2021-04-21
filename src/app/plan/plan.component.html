@@ -1,1 +1,9 @@
-<p>plan works!</p>
+<div class="plan-content"
+     [ngStyle]="{'background-color': plan?.color}">
+  <span class="plan-content-name">{{plan?.name}}</span>
+  <span class="plan-content-value">{{plan?.value}}</span>
+  <span class="plan-content-description">{{plan?.description}}</span>
+  <div class="plan-content-action">
+    <button class="plan-content-action-button">BUY</button>
+  </div>
+</div>

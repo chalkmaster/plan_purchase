@@ -4,6 +4,7 @@
   align-items: center;
   background-image: linear-gradient(to right, #6600ff, #6600ff, #6600ff, #5300cf, #5300cf, #5300cf);
   display: flex;
+  grid-area: "toolbar";
   height: $toobar-height;
   left: 0;
   padding: 0 $padding-default 0 $padding-default;

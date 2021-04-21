@@ -2,20 +2,17 @@
 
 html {
   font-weight: normal;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+  font-family: Roboto, "Segoe UI", -apple-system, BlinkMacSystemFont, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
 }
 
 app-root {
   display: grid;
-  grid-template-areas: toolbar, content;
-  grid-template-columns: 1;
+  grid-template-areas: "toolbar", "content";
+  grid-template-columns: auto;
   grid-template-rows: $toobar-height auto;
 }
 
 .spacer {
   flex: 1;
-}
-
-@media screen and (max-width: 800px) {
 }
