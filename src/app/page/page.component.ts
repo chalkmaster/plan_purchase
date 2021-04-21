@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Plan } from '../plan/plan';
-import { PurchaseService } from '../services/purchase.service';
+import { PurchaseService } from '../purchase/purchase.service';
 
 @Component({
   selector: 'app-page',

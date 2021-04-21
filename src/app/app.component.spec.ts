@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
@@ -15,21 +15,28 @@ describe('AppComponent', () => {
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const fixture: ComponentFixture<AppComponent> = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
   it('should have as title \'plan-purchase\'', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const fixture: ComponentFixture<AppComponent> = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.componentInstance;
     expect(app.title).toEqual('plan-purchase');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('should render the toolbar', () => {
+    const fixture: ComponentFixture<AppComponent> = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('plan-purchase app is running!');
+    const nativeElement: HTMLElement = fixture.nativeElement;
+    expect(nativeElement.querySelector('app-toolbar')).not.toBeNull();
+  });
+
+  it('should render router outlet area', () => {
+    const fixture: ComponentFixture<AppComponent> = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const nativeElement: HTMLElement = fixture.nativeElement;
+    expect(nativeElement.querySelector('router-outlet')).not.toBeNull();
   });
 });

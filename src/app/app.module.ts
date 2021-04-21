@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageComponent } from './page/page.component';
 import { PlanComponent } from './plan/plan.component';
-import { PurchaseService } from './services/purchase.service';
+import { PurchaseService } from './purchase/purchase.service';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({

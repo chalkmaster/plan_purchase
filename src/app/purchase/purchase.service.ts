@@ -14,6 +14,10 @@ export class PurchaseService {
     this.loadPlans();
   }
 
+  getPlans(): Plan[] {
+    return this.plans;
+  }
+
   loadPlans(): void {
     this.plans = data;
   }
@@ -21,11 +25,11 @@ export class PurchaseService {
   getByPage(page: number): Plan[] {
     const pageSize: number = environment.pageSize;
     const startIndex: number = (page - 1) * pageSize;
-    return this.plans.slice(startIndex, startIndex + pageSize);
+    return this.getPlans().slice(startIndex, startIndex + pageSize);
   }
 
   buyPlan(plan: Plan): void {
-    this.plans.forEach((p: Plan) => {
+    this.getPlans().forEach((p: Plan) => {
       if (plan.id === p.id) {
         p.status = PlanStatus.bought;
       } else {
@@ -35,6 +39,6 @@ export class PurchaseService {
   }
 
   cancel(): void {
-    this.plans.forEach((p: Plan) => p.status = PlanStatus.available);
+    this.getPlans().forEach((p: Plan) => p.status = PlanStatus.available);
   }
 }
