@@ -1,6 +1,6 @@
 # PlanPurchase
 
-This frontend app was creeated as part of a challange.
+This frontend app was created as part of a challenge.
 
 Angular Version: 11.2.9.
 
@@ -11,12 +11,11 @@ Angular Version: 11.2.9.
 - One in-memory service
 - Some unit test coverage
 
-## Application behaviours
+## Application behaviors
 - There are four options for purchase plans split across two pages.
 - Only one option can be purchased at a time.
-- The purchase can be cancelled and this will return to the original selection.
-- Each purchase option is presented within a reusable component bound to values gathered via an in-
-memory angular service.
+- The purchase can be canceled and this will return to the original selection.
+- Each purchase option is presented within a reusable component bound to values gathered via an in-memory angular service.
 - The service tracks which item is currently purchased to allow the presentation to be adjusted accordingly.
 - The app is responsive presenting options in a single column when the device width is below 800px
 
