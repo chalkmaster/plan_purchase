@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "angular.ng-template",
+    "ms-azuretools.vscode-docker"
+  ]
+}
