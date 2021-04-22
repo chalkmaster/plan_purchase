@@ -2,7 +2,7 @@
 
 .toolbar {
   align-items: center;
-  background-image: linear-gradient(to right, #6600ff, #6600ff, #6600ff, #5300cf, #5300cf, #5300cf);
+  background-image: linear-gradient(to right, #6600ff 40%, #5300cf 50%);
   display: flex;
   grid-area: "toolbar";
   height: $toobar-height;
